@@ -1,0 +1,882 @@
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #ffffff;
+}
+
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 80px;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: static;
+    top: 0%;
+    left: 0%;
+    z-index: 9999;
+}
+
+header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
+/*  Navigation */
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav li{
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a.active {
+    color: #ffe082;
+    font-weight: 700;
+    /* border-bottom: 2px solid #ffe082;
+    padding-bottom: 5px; */
+}
+
+nav a:hover {
+    color: #ffe082;
+}
+
+
+/* Home Section*/
+
+main {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 85px;
+    /* padding: 120px 50px 20px; */
+    gap: 20px;
+}
+
+.hero {
+    max-width: 850px;
+    /* margin-top: 20px; */
+    text-align: center;
+    padding: 60px 45px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Heading */
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero h2 span {
+    color: #ffe082;
+}
+
+
+/*  Paragraph */
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #f5f5f5;
+    margin-bottom: 30px;
+}
+
+
+/* Button */
+
+.hero button,
+.hero a.button {
+    display: inline-block;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 30px;
+    background: #ffffff;
+    color: #6a4bc3;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero button:hover,
+.hero a.button:hover {
+    transform: translateY(-3px);
+    background: #ffe082;
+    color: #4b348c;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Joke Emoji */
+
+.emoji {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+
+/*Mobile Responsive */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 45px 25px;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .emoji {
+        font-size: 50px;
+    }
+}
+
+
+
+/* Project Overview*/
+
+.overview {
+    width: 100%;
+    max-width: 850px;
+    margin: 40px auto 20px;
+    padding: 45px 40px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+.overview h2 {
+    font-size: 32px;
+    margin-bottom: 18px;
+    color: #ffe082;
+}
+
+.overview p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #f5f5f5;
+}
+
+@media (max-width: 768px) {
+
+    .overview {
+        margin: 30px 20px 50px;
+        padding: 35px 25px;
+    }
+
+    .overview h2 {
+        font-size: 27px;
+    }
+
+    .overview p {
+        font-size: 15px;
+    }
+}
+
+footer {
+    margin-top: 0;
+    padding: 10px 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(15px);
+}
+
+footer p {
+    margin: 6px 0;
+}
+
+/* Register Page */
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 45px auto;
+    padding: 40px 40px;
+    text-align: center;
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.container h1 {
+    font-size: 34px;
+    color: #ffffff;
+}
+
+.container > p {
+    color: #f5f5f5;
+}
+
+#registrationform {
+    text-align: left;
+}
+
+#registrationform label {
+    display: block;
+    margin-bottom: 7px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+#registrationform input {
+    width: 90%;
+    padding: 11px 14px;
+    margin-bottom: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 15px;
+}
+
+#registrationform input:focus {
+    border: 2px solid #ffe082;
+}
+
+#registrationform button {
+    width: 90%;
+    padding: 12px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 15px;
+
+    background: #ffffff;
+    color: #6a4bc3;
+
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#registrationform button:hover {
+    background: #ffe082;
+    color: #4b348c;
+    transform: translateY(-2px);
+}
+.login-link {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.login-link p {
+    margin: 0;
+}
+
+.login-link a {
+    color: #ffe082;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Login Page */
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 45px auto;
+    padding: 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+   
+}
+
+.login-main{
+    min-height: auto;
+    padding-top: 40px;
+   margin-bottom: 60px;
+}
+
+.login-container .emoji {
+    font-size: 55px;
+    margin-bottom: 2px;
+}
+
+.login-container h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+   
+}
+
+.login-container > p {
+    color: #f5f5f5;
+    margin-bottom: 25px;
+}
+
+
+/* Form */
+
+#loginForm {
+    text-align: left;
+}
+
+#loginForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+#loginForm input {
+    width: 90%;
+    padding: 11px 14px;
+    margin-bottom: 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 15px;
+}
+
+#loginForm input:focus {
+    border: 2px solid #ffe082;
+}
+
+
+/* Login Button */
+
+#loginForm button {
+    width: 90%;
+    padding: 12px;
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #ffffff;
+    color: #6a4bc3;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#loginForm button:hover {
+    background: #ffe082;
+    color: #4b348c;
+    transform: translateY(-2px);
+}
+
+
+/* Register Link */
+
+.register-link {
+    margin-top: 22px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.register-link p {
+    margin: 0;
+    color: #f5f5f5;
+}
+
+.register-link a {
+    color: #ffe082;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+ 
+
+
+/* About Page */
+
+.about-main {
+    min-height: auto;
+    padding: 45px 20px;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 10px 40px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.about-container .emoji {
+    font-size: 60px;
+    margin-bottom: 5px;
+    
+}
+
+.about-container h1 {
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+.about-container h2 {
+    color: #ffe082;
+    font-size: 28px;
+    margin: 30px 0 15px;
+}
+
+.about-container p {
+    color: #f5f5f5;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-container:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.16);
+     transition: 0.3s;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .about-main {
+        padding: 30px 20px;
+    }
+
+    .about-container {
+        padding: 35px 25px;
+    }
+
+    .about-container h1 {
+        font-size: 30px;
+    }
+
+    .about-container p {
+        font-size: 15px;
+    }
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.feature {
+    padding: 25px 25px;
+
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+#h2{
+    color: #ffe082;
+    margin-bottom: 2px;
+    margin-top: 15px;
+    font-size: 40px;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.feature span {
+    font-size: 35px;
+}
+
+.feature h3 {
+    margin: 10px 0;
+    color: #ffe082;
+    font-size: 20px;
+}
+
+.feature p {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   Jokes Page
+========================= */
+
+.jokes-main {
+    min-height: auto;
+    padding: 35px 20px 60px;
+}
+
+.jokes-container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 45px 50px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.jokes-container .emoji {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.jokes-container h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.joke-subtitle {
+    color: #f5f5f5;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+/* Joke Card */
+
+.joke-card {
+    padding: 30px;
+    margin: 20px auto;
+    min-height: 120px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 18px;
+}
+
+#jokeText {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #ffffff;
+}
+
+/* Get Joke Button */
+
+#getJokeBtn {
+    padding: 13px 30px;
+    border: none;
+    border-radius: 30px;
+
+    background: #ffffff;
+    color: #6a4bc3;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#getJokeBtn:hover {
+    background: #ffe082;
+    color: #4b348c;
+    transform: translateY(-2px);
+}
+
+/* Action Buttons */
+
+.joke-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.joke-actions button {
+    padding: 10px 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.joke-actions button:hover {
+    background: #ffe082;
+    color: #4b348c;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .jokes-main {
+        padding: 30px 20px 50px;
+    }
+
+    .jokes-container {
+        padding: 35px 25px;
+    }
+
+    .jokes-container h1 {
+        font-size: 30px;
+    }
+
+    #jokeText {
+        font-size: 17px;
+    }
+
+    .joke-actions {
+        flex-direction: column;
+    }
+
+    .joke-actions button {
+        width: 100%;
+    }
+}
+
+  /* my jokes */
+
+.myjokes-main {
+    min-height: auto;
+    padding: 40px 20px 60px;
+}
+
+.myjokes-container {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 45px 50px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.myjokes-container .emoji {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.myjokes-container h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.myjokes-subtitle {
+    color: #f5f5f5;
+    font-size: 20px;
+    margin-bottom: 35px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* Sections */
+
+.myjokes-section {
+    margin-top: 30px;
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 20px;
+}
+
+.myjokes-section h2 {
+    color: #ffe082;
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* Joke Cards */
+
+.myjoke-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 10px;
+    margin-bottom: 15px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 15px;
+}
+
+.myjoke-card p {
+    flex: 1;
+    color: white;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* Remove Button */
+
+.myjoke-card button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    flex-shrink: 0;
+}
+
+.myjoke-card button:hover {
+    background: #ffe082;
+    color: #4b348c;
+  }
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .myjokes-container {
+        padding: 35px 20px;
+    }
+
+    .myjokes-container h1 {
+        font-size: 30px;
+    }
+
+    .myjokes-section {
+        padding: 20px 15px;
+    }
+
+    .myjoke-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .myjoke-card button {
+        width: 100%;
+    }
+}
+

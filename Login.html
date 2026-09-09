@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Random Joke Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h2>Random Joke Generator</h2>
+
+        <nav>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Register.html">Register</a></li>
+            <li><a href="login.html" class="active">Login</a></li>
+            <li><a href="About.html" >About</a></li>
+            <li><a href="jokes.html">Jokes</a></li> 
+            
+            <!-- <li><a href="favorite.html" >Favorites</a></li>  -->
+        </nav>
+    </header>
+
+
+    <!-- Login Section -->
+    <main class="login-main">
+
+        <div class="login-container">
+
+            <!-- <div class="emoji">😂</div> -->
+
+            <h1>Login</h1>
+ 
+            <form id="loginForm">
+                
+                <label for="loginUsername">User Name:</label>
+                <input type="text" id="loginUsername" placeholder="Enter your username" required > 
+                
+                <label for="password">Password:</label>
+                <input type="password" id="loginPassword" placeholder="Enter your password" required> 
+                
+                <button type="submit">Login</button>
+            
+            </form>
+
+            <div class="register-link">
+                <p>Don't have an account?</p>
+                <a href="Register.html">Register here</a>
+            </div>
+
+        </div>
+
+    </main>
+        
+<!-- Footer -->
+    <footer>
+        <p>© 2026 Random Joke Generator. All Rights Reserved.</p>
+        <p>Have fun, laugh more! 😄</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

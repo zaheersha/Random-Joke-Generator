@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact - Random Joke Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.logo {
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffe082;
+}
+
+.nav-links a.active {
+    color: #ffe082;
+    font-weight: 700;
+}
+
+
+/* Mobile Navbar */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        height: auto;
+        padding: 18px 5%;
+
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+}
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact-section {
+    min-height: calc(100vh - 80px);
+    padding: 25px 20px 60px;
+    display: flex;
+    margin-bottom: 1pxpx;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contact Form */
+
+.contact-form {
+    width: 100%;
+    max-width: 550px;
+    padding: 40px 50px;
+  
+    margin-top: 2px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+
+.contact-form h2 {
+    color: #ffe082;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 2px;
+}
+
+/* Form */
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Inputs */
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 13px 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 15px;
+}
+
+/* Placeholder */
+
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+    color: #777;
+}
+
+/* Focus */
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border: 2px solid #ffe082;
+}
+
+/* Message Box */
+
+#contactForm textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+/* Send Button */
+
+#contactForm button {
+    width: 100%;
+    padding: 13px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #ffffff;
+    color: #6a4bc3;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#contactForm button:hover {
+    background: #ffe082;
+    color: #4b348c;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   CONTACT MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .contact-section {
+        padding: 35px 20px 50px;
+    }
+
+    .contact-form {
+        padding: 35px 25px;
+    }
+
+    .contact-form h2 {
+        font-size: 27px;
+        margin-bottom: 20px;
+       
+    }
+
+    #contactForm input,
+    #contactForm textarea {
+        font-size: 14px;
+    }
+
+    #contactForm button {
+        font-size: 15px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">😂 Joke Generator</div>
+
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="jokes.html">Jokes</a></li>
+            <li><a href="myjokes.html">My Jokes</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+            <!-- Contact Form -->
+            <div class="contact-form">
+
+                <h2>Send Us a Message</h2>
+
+                <form id="contactForm">
+
+                    <input type="text" id="name" placeholder="Your Name" required>
+
+                    <input type="email" id="email" placeholder="Your Email" required>
+
+                    <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+
+                    <button type="submit">Send Message 🚀</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Random Joke Generator. All Rights Reserved.</p>
+        <p>Have fun, laugh more! 😄</p>
+    </footer>
+
+
+    <script>
+        function logout() {
+            localStorage.removeItem("loggedIn");
+            window.location.href = "login.html";
+        }
+
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            alert("Thank you for contacting us! 😊");
+
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
